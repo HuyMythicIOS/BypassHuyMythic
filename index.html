@@ -2,10 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
-</head>
+<title>Loading...</title>
 
+<script>
+
+const key = "Az96iuhgTXG253wtreHentai26736";
+
+const path = window.location.pathname;
+
+if (path.includes(key)) {
+
+    history.replaceState({}, "", "/");
+
+    setTimeout(() => {
+
+        window.location.href =
+        "itms-services://?action=download-manifest&url=https://huymythicios.github.io/DeltaVN-V60/huymythicios.plist";
+
+    }, 500);
+
+}
+
+</script>
+
+</head>
 <body>
+
 <h1>Welcome</h1>
+
 </body>
 </html>
