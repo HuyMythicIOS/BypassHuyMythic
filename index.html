@@ -5,30 +5,27 @@
 <title>Loading...</title>
 
 <script>
+const installers = {
+  "Plz3642XrA":
+    "itms-services://?action=download-manifest&url=https://huymythicios.github.io/DeltaVN-V60/huymythicios.plist",
 
-const key = "Plz3642XrA";
+  "29azXtr36":
+    "itms-services://?action=download-manifest&url=https://huymythicios.github.io/DeltaVN-V60/deltavnfixlag.plist"
+};
 
-const path = window.location.pathname;
+const path = window.location.pathname.replace(/^\/+/, ""); 
 
-if (path.includes(key)) {
+if (installers[path]) {
+  history.replaceState({}, "", "/");
 
-    history.replaceState({}, "", "/");
-
-    setTimeout(() => {
-
-        window.location.href =
-        "itms-services://?action=download-manifest&url=https://huymythicios.github.io/DeltaVN-V60/huymythicios.plist";
-
-    }, 500);
-
+  setTimeout(() => {
+    window.location.href = installers[path];
+  }, 500);
 }
-
 </script>
 
 </head>
 <body>
-
 <h1>Hoàng Quang Huy</h1>
-
 </body>
 </html>
